@@ -64,22 +64,6 @@ def prefix_calculator(inp):
         stack = build_stack_prefix(stack)
     return stack[0]
     
-    
-def infix_calculator(inp):
-    '''
-    Function to solve the prefix calculator with no parenthesis(part one)
-    In order to solve the problem, we will be using a stack data structure
-    '''
-    # We pre-process the input by removing the spaces
-    inp = inp.split(" ")
-    # We build the stack
-    stack = build_stack(inp)
-    # We keep building the stack until there is only one element
-    # The last element is the result
-    while len(stack) > 1:
-        stack = build_stack(stack)
-    return stack[0]
-    
 # Execute main function
 if __name__ == '__main__':
     print("Tests for Prefix calculator...")
